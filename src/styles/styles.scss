@@ -1,0 +1,33 @@
+$theme-colors: (
+  "primary":    #2c3e50,
+  "secondary":  #1d6042,
+  "success":    #198754,
+  "info":       #0dcaf0,
+  "warning":    #ffc107,
+  "danger":     #dc3545,
+  "light":      #f8f9fa,
+  "dark":       #343a40,
+);
+
+
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+.pointer {
+  cursor: pointer;
+}
+
+.grafica{
+  width: 200;
+  border: #343a40;
+}
+
+.center-fit {
+  max-width: 90%;
+  max-height: 90vh;
+  margin: auto;
+}
+
+.titulo{
+  font-size: large;
+}
