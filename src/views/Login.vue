@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid login">
+    <div class="container-fluid login" style="background-image: url('https://images.unsplash.com/photo-1564450004949-76e37511ca68?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=1600'); background-size: 100%;">
         <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <img src="../assets/IMAGENPRINCIPAL-HOYSIHAYAGUA.png" class="imagen" />
@@ -30,8 +30,17 @@
                             </div>
 
                             <div class="form-group row mb-0">
-                                <div class="col-md-8 offset-md-4">
+                                <div class="mt-3 d-grid gap-2">
                                     <button type="submit" class="btn btn-primary">Login</button>
+                                    <router-link
+                                     to="/Register"
+                                     custom
+                                     v-slot="{ navigate }">
+                                    <button
+                                    @click="navigate"
+                                    role="link"
+                                    class="btn btn-secondary" type="button">Registrarse</button>
+                                    </router-link>
                                 </div>
                             </div>
                         </form>
