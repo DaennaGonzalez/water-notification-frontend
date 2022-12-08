@@ -41,6 +41,7 @@ export const createEntry = async ({ commit }, entry ) => {
     // dataToSave
     const { date, text, checked } = entry
 
+
     console.log(entry);
     const dataToSave = { date, text, checked }
 

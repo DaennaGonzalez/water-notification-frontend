@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import VueGoogleMaps from "@fawmi/vue-google-maps";
 import './styles/styles.scss'
+//import { auth, app } from './api/firebase';
+
+
 
 createApp(App)
     .use(VueGoogleMaps, {

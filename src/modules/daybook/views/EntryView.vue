@@ -37,7 +37,7 @@
 import { defineAsyncComponent } from 'vue'
 import { mapGetters, mapActions } from 'vuex' // computed!!!
 import Swal from 'sweetalert2'
-import getDayMonthYear from '../helpers/getDayMonthYear'
+import getDayMonthYear from '@/helpers/getDayMonthYear'
 
 
 export default {
