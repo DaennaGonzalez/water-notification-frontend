@@ -1,24 +1,19 @@
-# journal
+# water-notification-frontend
 
 ## Project setup
+Primero que nada hay que tener nvm instalado en la pc, despues instalar la version v14.16.0
+
 ```
-yarn install
+nvm install v14.16.0
 ```
 
-### Compiles and hot-reloads for development
+### Despues instalar esa version en especifico, hay que tirar el siguiente comando:
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+npm install
 ```
 
-### Lints and fixes files
+### Y finalmente para correr el proyecto
 ```
-yarn lint
+npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
