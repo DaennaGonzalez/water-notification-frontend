@@ -10,11 +10,11 @@
         </div>
     </div>
 
-    <div v-else class="d-flex">
-        <div class="col-4">
+    <div v-else class="container-fluid">
+        <div class="row">
             <map-component />
         </div>
-        <div class="col-4">
+        <div class="row">
             <router-view />
         </div>
     </div>

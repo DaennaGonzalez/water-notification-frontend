@@ -1,13 +1,15 @@
 <template>
-    <ContentWrapper>
-       <map-component></map-component>
-    </ContentWrapper>
+    <div class="container-fluid">
+        <map-component></map-component>
+    </div>
+
 </template>
 
 <script>
+import { defineAsyncComponent } from 'vue'
 export default {
-     components: {
-        MapComponent: () => import('../components/MapComponent.vue')
-    },
+    components: {
+        MapComponent: defineAsyncComponent(() => import("../components/MapComponent.vue")),
+    }
 }
 </script>

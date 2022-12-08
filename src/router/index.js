@@ -17,11 +17,11 @@ const routes = [
     component: Register
 },
   {
-    path: '/',
+    path: '/comentarios',
     ...daybookRouter
   },
   {
-    path: '/generalView',
+    path: '/',
     ...generalView
   }
 ]
