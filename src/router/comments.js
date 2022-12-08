@@ -1,6 +1,6 @@
 export default {
 
-    name: 'daybook',
+    name: 'comments',
     component: () => import(/* webpackChunkName: "daybook" */ '@/modules/daybook/layouts/DayBookLayout.vue'),
     children: [
         {

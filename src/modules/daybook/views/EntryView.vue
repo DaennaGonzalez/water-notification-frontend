@@ -22,7 +22,7 @@
 
 
         <div class="d-flex">
-           <ComponentWithMap />
+          <MapView />
        </div>
     </template>
 
@@ -49,7 +49,7 @@ export default {
     },
     components: {
         Fab: defineAsyncComponent(() => import('../components/Fab.vue')),
-        ComponentWithMap: defineAsyncComponent(() => import('../components/ComponentWithMap.vue')),
+        MapView: defineAsyncComponent(() => import('../../../components/mapview/MapView.vue')),
     },
 
     data() {

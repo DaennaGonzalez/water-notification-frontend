@@ -1,5 +1,4 @@
 <template>
-    <h1>MapView</h1>
     <div v-if="!isUserLocationReady" 
         class="row justify-content-md-center">
         <div class="col-3 alert-info text-center mt-5">
