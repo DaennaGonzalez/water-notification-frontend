@@ -17,7 +17,8 @@
         <input type="checkbox" id="d-flex flex-column checkbox" v-model="entry.checked" :disabled="disable" />
         <label for="checkbox">¿Va a ver agua?</label>
     </template>
-
+    <search-bar/>
+    <map-view/>
     <Fab v-show="!disable" icon="fa-save" @on:click="saveEntry" />
 
 </template>
@@ -27,6 +28,7 @@ import { defineAsyncComponent } from 'vue'
 import { mapGetters, mapActions } from 'vuex' // computed!!!
 import Swal from 'sweetalert2'
 import getDayMonthYear from '@/helpers/getDayMonthYear'
+import MapView from '@/components/mapview/MapView.vue'
 
 export default {
     props: {
@@ -36,7 +38,9 @@ export default {
         }
     },
     components: {
-        Fab: defineAsyncComponent(() => import('@/components/Fab.vue'))
+        Fab: defineAsyncComponent(() => import('@/components/Fab.vue')),
+        MapView: defineAsyncComponent(()=> import('@/components/mapview/MapView.vue')),
+        SearchBar: defineAsyncComponent(()=> import('@/components/searchbar/SearchBar.vue'))
     },
 
     data() {
@@ -93,11 +97,16 @@ export default {
 
             if (!this.entry.id) {
                 // Crear una nueva entrada
+
+                if(!this.entry.text){
+                    Swal.hideLoading();
+                    Swal.fire('Error', 'Comentario vacio', 'warning')
+                    return;
+                }
+
                 const id = await this.createEntry(this.entry)
                 this.$router.push({ name: 'entry', params: { id } })
             }
-
-            this.file = null
             Swal.fire('Guardado', 'Entrada registrada con éxito', 'success')
 
 
