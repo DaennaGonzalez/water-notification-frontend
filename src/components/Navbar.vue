@@ -22,7 +22,7 @@
 import { useStore} from "vuex";
 import { useRouter } from "vue-router";
 import {computed} from "vue";
-import { auth } from '../../../api/firebase'
+import { auth } from '../api/firebase'
 
 
 export default {

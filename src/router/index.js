@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Login from '../views/Login'
 import Register from '../views/Register'
 import {auth} from '../api/firebase'
-import daybookRouter from './daybook'
+import commentsRouter from './comments'
 import generalView from './generalView'
 
 const routes = [
@@ -18,7 +18,7 @@ const routes = [
 },
   {
     path: '/comentarios',
-    ...daybookRouter
+    ...commentsRouter
   },
   {
     path: '/',

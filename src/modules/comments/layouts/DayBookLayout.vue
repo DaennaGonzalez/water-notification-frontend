@@ -18,33 +18,20 @@
             <router-view />
         </div>
        </div>
-
-
-       <div class="entry-title d-flex justify-content-between p-2">
-            
-            <div>
-                <span class="text-success fs-3 fw-bold">Grafica de notificacion de Agua</span>
-            </div>
-        </div>
-       <div class="d-flex">
-           <BartChart />
-       </div>
 </template>
 <script>
 import { defineAsyncComponent } from 'vue'
 import { mapActions, mapState } from 'vuex'
-import BartChart from '../components/BartChart.vue';
 export default {
     components: {
-    Navbar: defineAsyncComponent(() => import("../components/Navbar.vue")),
-    EntryList: defineAsyncComponent(() => import("../components/EntryList.vue")),
-    BartChart
+    Navbar: defineAsyncComponent(() => import("../../../components/Navbar.vue")),
+    EntryList: defineAsyncComponent(() => import("../components/EntryList.vue"))
 },
     methods: {
-        ...mapActions('journal', ['loadEntries'])
+        ...mapActions('comments', ['loadEntries'])
     },
     computed: {
-        ...mapState( 'journal', ['isLoading'])
+        ...mapState( 'comments', ['isLoading'])
     },
     created() {
         this.loadEntries()
