@@ -3,14 +3,18 @@
 import { defineComponent, onMounted, ref, watch } from "vue"
 import { usePlacesStore } from "../../composables/usePlacesStore";
 import mapboxgl from "mapbox-gl";
+import { useCommentsStore } from "../../composables/useCommentsStore";
 export default defineComponent({
     name: "MapView",
     setup() {
 
         const mapElement = ref();
         const { isLoading, userLocation, isUserLocationReady } = usePlacesStore();
-
+        const { comments } = useCommentsStore();
         const initMap = async () => {
+
+
+            console.log("************************** Comentarios", comments.value);
 
             if (!mapElement.value) return;
             if (!userLocation.value) return;

@@ -2,7 +2,7 @@ import journalApi from '@/api/journalApi'
 
 
 export const loadEntries = async ({ commit }) => {
-
+    console.log("Entré aqui************************");
     const { data } = await journalApi.get('/entries.json')
 
     if ( !data ){

@@ -1,6 +1,5 @@
 import { computed, onMounted } from "vue"
 import { useStore } from "vuex"
-import { searchPlacesByTerm } from "../store/places/actions"
 
 export const usePlacesStore = ()=>{
     const store = useStore()
