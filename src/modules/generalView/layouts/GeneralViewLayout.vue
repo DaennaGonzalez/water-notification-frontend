@@ -23,7 +23,7 @@
 import { defineAsyncComponent } from 'vue'
 export default {
     components: {
-        Navbar: defineAsyncComponent(() => import("../../daybook/components/Navbar.vue")),
+        Navbar: defineAsyncComponent(() => import("../../../components/Navbar.vue")),
     }
 }
 </script>

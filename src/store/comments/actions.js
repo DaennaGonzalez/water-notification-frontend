@@ -1,7 +1,5 @@
 import journalApi from '@/api/journalApi'
-// export const myAction = async ({ commit }) => {
 
-// }
 
 export const loadEntries = async ({ commit }) => {
 

@@ -1,14 +1,16 @@
 import { createStore } from 'vuex'
 
-import journal from './journal'
+import comments from './comments'
 import generalView from './generalView'
 import AuthenticationModule from './auth.store'
+import places from './places'
 
 const store = createStore({
     modules: {
-        journal,
+        comments,
         generalView,
         auth: AuthenticationModule,
+        places
     }
 })
 

@@ -1,12 +1,12 @@
 export default {
 
-    name: 'daybook',
-    component: () => import(/* webpackChunkName: "daybook" */ '@/modules/daybook/layouts/DayBookLayout.vue'),
+    name: 'comments',
+    component: () => import(/* webpackChunkName: "comments" */ '@/modules/comments/layouts/DayBookLayout.vue'),
     children: [
         {
             path: '',
             name: 'no-entry',
-            component: () => import(/* webpackChunkName: "daybook-no-entry" */ '@/modules/daybook/views/NoEntrySelected.vue'),
+            component: () => import(/* webpackChunkName: "comments-no-entry" */ '@/modules/comments/views/NoEntrySelected.vue'),
             meta: {
                 requiresAuth: true
             }
@@ -14,7 +14,7 @@ export default {
         {
             path: ':id',
             name: 'entry',
-            component: () => import(/* webpackChunkName: "daybook-no-entry" */ '@/modules/daybook/views/EntryView.vue'),
+            component: () => import(/* webpackChunkName: "comments-no-entry" */ '@/modules/comments/views/EntryView.vue'),
             meta: {
                 requiresAuth: true
             },
