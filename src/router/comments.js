@@ -1,7 +1,7 @@
 export default {
 
     name: 'comments',
-    component: () => import(/* webpackChunkName: "comments" */ '@/modules/comments/layouts/DayBookLayout.vue'),
+    component: () => import(/* webpackChunkName: "comments" */ '@/modules/comments/layouts/CommentsLayout.vue'),
     children: [
         {
             path: '',

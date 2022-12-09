@@ -1,5 +1,5 @@
 import { auth } from '../api/firebase'
-import {createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut} from 'firebase/auth'
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut, updateProfile} from 'firebase/auth'
 
 const AuthenticationModule = {
     state: {
@@ -23,7 +23,7 @@ const AuthenticationModule = {
             console.log(response)
             if (response) {
                 context.commit('SET_USER', response.user)
-                response.user.updateProfile({ displayName: name })
+              await response.user.updateProfile({ displayName: name })
             } else {
                 throw new Error('Unable to register user')
             }

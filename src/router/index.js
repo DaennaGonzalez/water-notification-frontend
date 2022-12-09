@@ -4,6 +4,7 @@ import Register from '../views/Register'
 import {auth} from '../api/firebase'
 import commentsRouter from './comments'
 import generalView from './generalView'
+import graphsRouter from './graphs' 
 
 const routes = [
   {
@@ -23,6 +24,10 @@ const routes = [
   {
     path: '/',
     ...generalView
+  },
+  {
+  path: '/graphs',
+  ...graphsRouter
   }
 ]
 

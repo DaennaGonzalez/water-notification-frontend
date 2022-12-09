@@ -2,12 +2,10 @@
 /* eslint-disable no-undef */
 import {usePlacesStore} from '@/composables'
 import MapView from '@/components/mapview/MapView.vue'
-import CommentButton from '@/components/btn-comment/CommentButton.vue'
 export default {
     name: 'MapComponent',
     components:{
-        MapView,
-        CommentButton 
+        MapView
     },
     setup() {
         usePlacesStore()
@@ -17,6 +15,9 @@ export default {
 
 <template>
     <h4> Zonas afectadas </h4>
-    <comment-button/>
+    <button class="btn btn-primary mx-3"
+          @click="$router.push('/comentarios')">
+          Nueva comentario
+    </button>
     <map-view />
 </template>
