@@ -9,7 +9,7 @@ export default defineComponent({
     setup() {
 
         const debouncedTimeout=ref()
-        const debouncedValued=ref('hola')
+        const debouncedValued=ref('')
         const {searchPlacesByTerm} = usePlacesStore();
         return { 
             searchTerm: computed({
