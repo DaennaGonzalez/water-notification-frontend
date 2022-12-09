@@ -1,5 +1,6 @@
 <template>
-    <nav class="navbar bg-secundary">
+    <nav style="    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+" class="navbar bg-secundary">
         <a class="navbar-brand text-white">
             <img src="@/assets/LOGO-HOYSIHAYAGUA.png" 
                  alt="Vue Logo"
@@ -7,7 +8,7 @@
                  width="150"
                  class="d-inline-block align-text-top mx-2">
 
-           <span class="titulo" style="color:blue">Notificacion de Agua</span>
+           <span class="" style="color:#0069c0">Sistema de notificacion de agua</span>
         </a>
 
 

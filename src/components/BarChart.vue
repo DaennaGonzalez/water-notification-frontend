@@ -1,6 +1,6 @@
 <template>
   <div>
-      <canvas id="myChart" class="grafica"></canvas>
+      <canvas id="myChart" class="col-xs-1" align="center"></canvas>
   </div>
 </template>
 <script>
@@ -12,9 +12,11 @@ export default{
           data: {
               labels: ['ZONA1', 'ZONA2', 'ZONA3', 'ZONA4'],
               datasets: [{
-                  label: '# of Votes',
+                  label: 'Numero de reportes por zona',
                   data: [45, 30, 15, 10],
-                  borderWidth: 1
+                  borderWidth: 1,
+                  backgroundColor: "rgb(255,99,132)",
+                  borderColor: "rgb(255,99,132)",
               }]
           },
           options: {
