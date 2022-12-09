@@ -5,8 +5,10 @@
     placeholder="Buscar ubicacion..."
     type="text" />
 </div>
+{{debouncedValued}}
+<search-results/>
 </template>
-<script lang="js" src="./SearchVar.js"/>
+<script lang="js" src="./SearchBar.js"/>
 <style scoped>
 .search-bar-container{
     margin-top: 10px;
