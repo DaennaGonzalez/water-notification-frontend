@@ -1,21 +1,15 @@
 <template>
-<div></div>
+    <BarChart/>
 </template>
 
 <script>
 
-
+import BarChart from '../../../components/BarChart.vue';
 
 export default {
     components: {
-    },
-
-    data() {
-        return {
-        }
-    },
-
-
+        BarChart
+    }
 
 }
 </script>

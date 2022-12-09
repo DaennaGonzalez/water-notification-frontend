@@ -1,30 +1,31 @@
 <template>
-    <Bar
-      id="my-chart-id"
-      :options="chartOptions"
-      :data="chartData"
-    />
-  </template>
-  
-  <script>
-  import { Bar } from 'vue-chartjs'
-  import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
-  
-  ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
-  
-  export default {
-    name: 'BarChart',
-    components: { Bar },
-    data() {
-      return {
-        chartData: {
-          labels: [ 'January', 'February', 'March' ],
-          datasets: [ { data: [40, 20, 12] } ]
-        },
-        chartOptions: {
-          responsive: true
-        }
-      }
-    }
+  <div>
+      <canvas id="myChart" class="grafica"></canvas>
+  </div>
+</template>
+<script>
+import Chart from 'chart.js/auto'
+export default{
+  mounted(){
+      const myChart = new Chart(document.getElementById('myChart'), {
+          type: 'line',
+          data: {
+              labels: ['ZONA1', 'ZONA2', 'ZONA3', 'ZONA4'],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [45, 30, 15, 10],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                  beginAtZero: true
+                  }
+              },
+          }
+      });
+      myChart;
   }
-  </script>
+}
+</script>

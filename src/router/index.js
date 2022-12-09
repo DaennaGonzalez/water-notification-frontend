@@ -26,7 +26,7 @@ const routes = [
     ...generalView
   },
   {
-  path: '/graphs',
+  path: '/grafica',
   ...graphsRouter
   }
 ]
