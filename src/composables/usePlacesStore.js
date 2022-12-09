@@ -1,5 +1,6 @@
 import { computed, onMounted } from "vue"
 import { useStore } from "vuex"
+import { searchPlacesByTerm } from "../store/places/actions"
 
 export const usePlacesStore = ()=>{
     const store = useStore()
@@ -15,6 +16,7 @@ export const usePlacesStore = ()=>{
         isLoading: computed(()=>store.state.places.isLoading),
         userLocation: computed(()=>store.state.places.userLocation),
 
-        isUserLocationReady: computed(()=>store.getters['places/isUserLocationReady'])
+        isUserLocationReady: computed(()=>store.getters['places/isUserLocationReady']),
+        searchPlacesByTerm: (query)=>store.dispatch('places/searchPlacesByTerm',query)
     }
 }
