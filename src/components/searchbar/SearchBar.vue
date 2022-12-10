@@ -6,7 +6,7 @@
     type="text" />
 </div>
 {{debouncedValued}}
-<search-results/>
+<!--search-results/-->
 </template>
 <script lang="js" src="./SearchBar.js"/>
 <style scoped>
