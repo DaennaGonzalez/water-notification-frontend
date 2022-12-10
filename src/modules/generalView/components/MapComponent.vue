@@ -15,9 +15,22 @@ export default {
 
 <template>
     <h4> Zonas afectadas </h4>
-    <button class="btn btn-primary mx-3"
-          @click="$router.push('/comentarios')">
-          Nueva comentario
-    </button>
+    <div class="row">
+        <div class="col-lg-6">
+            <button class="btn btn-primary mx-3"
+            @click="$router.push('/comentarios')">
+            Nueva comentario
+        </button>
+
+        </div>
+        <div class="col-lg-6">
+            <button class="btn btn-primary mx-3"
+          @click="$router.push('/grafica')">
+          Ver grafica
+         </button>
+        </div>
+    </div>
+
+
     <map-view />
 </template>

@@ -1,5 +1,21 @@
 <template>
     <Navbar />
+    <div class="row">
+        <div class="col-lg-6">
+            <button class="btn btn-primary mx-3"
+            @click="$router.push('/')">
+            Volver a mapa general
+        </button>
+
+        </div>
+        <div class="col-lg-6">
+            <button class="btn btn-primary mx-3"
+          @click="$router.push('/grafica')">
+          Ver grafica
+         </button>
+        </div>
+    </div>
+
     <div v-if="isLoading" 
         class="row justify-content-md-center">
         <div class="col-3 alert-info text-center mt-5">
