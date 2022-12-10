@@ -1,5 +1,5 @@
 <template>
-    <nav style="    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+    <nav style="    box-shadow: 0px 8px 5px -8px rgba(0,0,0,.5);
 " class="navbar bg-secundary">
         <a class="navbar-brand text-white">
             <img src="@/assets/LOGO-HOYSIHAYAGUA.png" 
